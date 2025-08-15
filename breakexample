@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	// A simple loop with a break
+	for i := 1; i <= 10; i++ {
+		switch {
+		case i == 5:
+			fmt.Println("Breaking at:", i)
+			break // Breaks out of the switch, but not the loop
+		case i%2 == 0:
+			fmt.Println(i, "is even")
+		default:
+			fmt.Println(i, "is odd")
+		}
+
+		// Break out of the loop when i is 7
+		if i == 7 {
+			fmt.Println("Exiting the loop")
+			break
+		}
+	}
+}
